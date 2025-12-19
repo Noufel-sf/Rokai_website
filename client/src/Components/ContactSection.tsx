@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import SocialLink from "./SocialLink";
 import { MessageCircle, MapPin, Send } from "lucide-react";
 import { socialLinks } from "../data";
+import HeadingText from "./ui/HeadingText";
 
 
 
@@ -52,17 +53,12 @@ const ContactSection: React.FC = () => {
 
       <div className="container flex flex-col gap-6 items-center mx-auto px-4 md:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="mb-8 flex flex-col items-center gap-2">
-          <h3 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-3">
-            طرق{" "}
-            <span className="text-primary">
-              التواصل
-            </span>
-          </h3>
-          <p className="text-slate-600 text-lg">
-            اختر الطريقة الأنسب لك للتواصل معنا
-          </p>
-        </div>
+       <HeadingText 
+          heading="تواصل"
+          subheading=" طرق التواصل"
+          subheading2=" معنا"
+          description="نحن هنا لمساعدتك والإجابة على أي استفسارات قد تكون لديك. لا تتردد في التواصل معنا من خلال الطرق التالية."
+        />
 
         {/* Image + Social Links Section */}
         <motion.div

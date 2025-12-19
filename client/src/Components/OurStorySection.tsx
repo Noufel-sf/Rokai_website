@@ -1,31 +1,9 @@
 // components/about/OurStorySection.tsx
 import React from "react";
 import { motion } from "framer-motion";
+import { timeline } from "../data";
 
 const OurStorySection: React.FC = () => {
-  const timeline = [
-    {
-      year: "2019",
-      title: "البداية",
-      description: "تأسيس الجمعية بمجموعة صغيرة من الشباب المتحمسين",
-    },
-    {
-      year: "2020",
-      title: "النمو",
-      description: "إطلاق أول برنامج بيئي وانضمام 100 عضو جديد",
-    },
-    {
-      year: "2022",
-      title: "التوسع",
-      description: "افتتاح مركز جديد وإطلاق 20 برنامج متنوع",
-    },
-    {
-      year: "2024",
-      title: "التأثير",
-      description: "الوصول إلى 500+ عضو نشط وشراكات مع 15 منظمة",
-    },
-  ];
-
   return (
     <section className="py-20 lg:py-32 ">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
@@ -37,12 +15,18 @@ const OurStorySection: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <p className="text-primary font-semibold text-lg mb-3">
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="mb-6 inline-block rounded-full bg-secondary/30 px-6 py-2 text-sm font-semibold text-primary"
+            >
               قصتنا
-            </p>
+            </motion.span>
             <h2 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
               رحلة من{" "}
-              <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              <span className="text-primary">
                 الشغف
               </span>{" "}
               إلى التأثير
@@ -73,12 +57,12 @@ const OurStorySection: React.FC = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="flex gap-4 items-start group"
                 >
-                  <div className="flex-shrink-0 w-20 text-right">
-                    <span className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                  <div className="shrink-0 w-20 text-right">
+                    <span className="text-2xl font-bold text-primary">
                       {item.year}
                     </span>
                   </div>
-                  <div className="flex-grow pl-4 border-r-2 border-slate-200 group-hover:border-primary transition-colors pb-4">
+                  <div className="grow pl-4 border-r-2 border-slate-200 group-hover:border-primary transition-colors pb-4">
                     <h4 className="text-lg font-bold text-slate-900 mb-1">
                       {item.title}
                     </h4>
@@ -101,32 +85,32 @@ const OurStorySection: React.FC = () => {
               <div className="space-y-4">
                 <div className="relative h-48 rounded-2xl overflow-hidden shadow-xl">
                   <img
-                    src="/about/story1.jpg"
+                    src="/s3.png"
                     alt="Our Story 1"
-                    className="object-cover hover:scale-110 transition-transform duration-500"
+                    className="object-cover h-full w-full hover:scale-110 transition-transform duration-500"
                   />
                 </div>
                 <div className="relative h-64 rounded-2xl overflow-hidden shadow-xl">
                   <img
-                    src="/about/story2.jpg"
+                    src="/s2.png"
                     alt="Our Story 2"
-                    className="object-cover hover:scale-110 transition-transform duration-500"
+                    className="object-cover h-full hover:scale-110 transition-transform duration-500"
                   />
                 </div>
               </div>
               <div className="space-y-4 pt-8">
                 <div className="relative h-64 rounded-2xl overflow-hidden shadow-xl">
                   <img
-                    src="/about/story3.jpg"
+                    src="/s1.png"
                     alt="Our Story 3"
-                    className="object-cover hover:scale-110 transition-transform duration-500"
+                    className="object-cover h-full hover:scale-110 transition-transform duration-500"
                   />
                 </div>
                 <div className="relative h-48 rounded-2xl overflow-hidden shadow-xl">
                   <img
-                    src="/about/story4.jpg"
+                    src="/s5.png"
                     alt="Our Story 4"
-                    className="object-cover hover:scale-110 transition-transform duration-500"
+                    className="object-cover h-full w-full hover:scale-110 transition-transform duration-500"
                   />
                 </div>
               </div>

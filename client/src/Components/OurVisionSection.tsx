@@ -13,50 +13,6 @@ import {
 } from "lucide-react";
 
 const OurVisionSection: React.FC = () => {
-  const visionPillars = [
-    {
-      icon: Globe,
-      title: "تأثير عالمي",
-      description: "نسعى لأن نكون نموذجاً يُحتذى به على المستوى العربي والعالمي",
-      color: "from-blue-500 to-cyan-600",
-    },
-    {
-      icon: Heart,
-      title: "مجتمع متماسك",
-      description: "بناء جيل واعٍ يضع المصلحة العامة والبيئة في صميم اهتماماته",
-      color: "from-rose-500 to-pink-600",
-    },
-    {
-      icon: Lightbulb,
-      title: "ابتكار مستدام",
-      description: "حلول إبداعية ومستدامة للتحديات البيئية والمجتمعية المعاصرة",
-      color: "from-amber-500 to-orange-600",
-    },
-  ];
-
-  const futureGoals = [
-    {
-      year: "2026",
-      title: "توسيع النطاق",
-      description: "الوصول إلى 1000+ عضو نشط وافتتاح 3 مراكز جديدة",
-    },
-    {
-      year: "2027",
-      title: "الشراكات الدولية",
-      description: "التعاون مع 10 منظمات دولية لتبادل الخبرات",
-    },
-    {
-      year: "2028",
-      title: "التأثير الوطني",
-      description: "تنفيذ 100+ برنامج بيئي على مستوى الجزائر",
-    },
-    {
-      year: "2030",
-      title: "الريادة الإقليمية",
-      description: "أن نصبح المرجع الأول للمبادرات الشبابية البيئية",
-    },
-  ];
-
   return (
     <section className="relative py-20 lg:py-32  overflow-hidden">
       {/* Background Decorations */}
@@ -72,7 +28,7 @@ const OurVisionSection: React.FC = () => {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute top-30 left-60 md:left-80  "
+        className="absolute top-20 left-60 lg:left-120 md:left-120 md:w-20 md:h-20 w-15 h-15  "
       >
         <img src="/vv.png" alt="" />
       </motion.div>
@@ -86,12 +42,10 @@ const OurVisionSection: React.FC = () => {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute top-60 left-40 md:left-120 w-20 h-20  "
+        className="absolute top-50 left-50 lg:left-130 md:left-100 md:w-20 md:h-20 w-15 h-15  "
       >
         <img src="/Icon.svg" alt="" />
       </motion.div>
-
-     
 
       <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
         {/* Main Vision Statement */}
@@ -108,14 +62,20 @@ const OurVisionSection: React.FC = () => {
               whileInView={{ scale: 1 }}
               viewport={{ once: true }}
               transition={{ type: "spring", stiffness: 200, delay: 0.2 }}
-              className="inline-flex items-center justify-center w-40 h-40  rounded-3xl mb-2"
+              className="flex items-start justify-start w-40 h-40  rounded-3xl mb-2"
             >
-                <img src="/rokailogo.png" alt="" />
+              <img src="/rokailogo.png" alt="" />
             </motion.div>
 
-            <p className="text-primary font-semibold text-lg mb-3">
-              نحو مستقبل أفضل
-            </p>
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="mb-4 inline-block rounded-full bg-secondary/30 px-6 py-2 text-sm font-semibold text-primary"
+            >
+              رؤيتنا للمستقبل
+            </motion.span>
 
             <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-slate-900 mb-6 leading-tight">
               رؤيتنا{" "}
@@ -138,15 +98,6 @@ const OurVisionSection: React.FC = () => {
                 </p>
               </div>
             </div>
-
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-secondary text-white font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all"
-            >
-              <span>اكتشف خطتنا</span>
-              <ArrowRight className="w-5 h-5" />
-            </motion.button>
           </motion.div>
 
           {/* Right: Image/Visual */}
@@ -162,7 +113,7 @@ const OurVisionSection: React.FC = () => {
                 <img
                   src="/why.png"
                   alt="Our Vision"
-                  className="object-cover w-full h-full"
+                  className="object-cover w-full h-full -z-10"
                 />
               </div>
 
@@ -227,11 +178,6 @@ const OurVisionSection: React.FC = () => {
             />
           </motion.div>
         </div>
-
-    
-
-
-     
       </div>
     </section>
   );

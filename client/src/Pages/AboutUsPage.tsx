@@ -22,18 +22,21 @@ import OurVisionSection from "../Components/OurVisionSection";
 import OurRoadmap from "../Components/OurRoadmap";
 import HeroBanner from "../Components/HeroBanner";
 
-
 const AboutUsPage: React.FC = () => {
   return (
     <main className="overflow-x-hidden">
-        <HeroBanner text="من نحن" icon1={<Sparkles className="w-16 h-16 text-white" strokeWidth={1.5} />} icon2={<Sun className="w-26 h-26 text-white" strokeWidth={1.5} />}   />
-        <OurVisionSection />
-        <OurRoadmap />
-        <OurStorySection />
-        <OurTeamSection />
-        <CTASection />
+      <HeroBanner
+        text="من نحن"
+        icon1={<Sparkles className="w-13 h-10  md:w-26 md:h-26 text-white" strokeWidth={1.5} />}
+        icon2={<Sun className="w-10 h-10  md:w-26 md:h-26 text-white" strokeWidth={1.5} />}
+      />
+      <OurVisionSection />
+      <OurRoadmap />
+      <OurStorySection />
+      <OurTeamSection />
+      <CTASection />
     </main>
   );
-}
+};
 
 export default AboutUsPage;

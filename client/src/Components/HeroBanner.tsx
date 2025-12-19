@@ -2,8 +2,17 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ArrowLeft, Sparkles, Sun } from "lucide-react";
+import RegisterationTrigger from "./ui/RegisterationTrigger";
 
-export default function HeroBanner({text , icon1 ,icon2 } : {text?: string , icon1?: React.ReactNode , icon2?: React.ReactNode}) {
+export default function HeroBanner({
+  text,
+  icon1,
+  icon2,
+}: {
+  text?: string;
+  icon1?: React.ReactNode;
+  icon2?: React.ReactNode;
+}) {
   return (
     <section className="relative px-6 py-5  overflow-hidden ">
       {/* Bottom Stats Section */}
@@ -44,23 +53,28 @@ export default function HeroBanner({text , icon1 ,icon2 } : {text?: string , ico
               # نضم إلينا اليوم واكتشف كيف يمكنك إحداث فرق حقيقي في مجتمعك
             </motion.p>
 
-            <motion.button
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.8 }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-3 bg-third cursor-pointer hover:bg-secondary text-white font-bold text-lg px-10 py-5 rounded-full shadow-2xl hover:shadow-secondary/50 transition-all duration-300"
-            >
-              <span>انضم الآن</span>
-              <motion.span
-                animate={{ x: [0, 5, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
-              >
-                ←
-              </motion.span>
-            </motion.button>
+            <RegisterationTrigger>
+              {({ onClick }) => (
+                <motion.button
+                  onClick={onClick}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.8 }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="inline-flex items-center gap-3 bg-third cursor-pointer hover:bg-secondary text-white font-bold text-lg px-10 py-5 rounded-full shadow-2xl hover:shadow-secondary/50 transition-all duration-300"
+                >
+                  <span>انضم الآن</span>
+                  <motion.span
+                    animate={{ x: [0, 5, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                  >
+                    ←
+                  </motion.span>
+                </motion.button>
+              )}
+            </RegisterationTrigger>
           </div>
 
           {/* Decorative Gradient Orbs */}
@@ -77,7 +91,7 @@ export default function HeroBanner({text , icon1 ,icon2 } : {text?: string , ico
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="absolute top-20 left-50 md:left-60  "
+            className="absolute top-5 md:top-20 left-65 md:left-60  "
           >
             {icon1}
           </motion.div>
@@ -91,7 +105,7 @@ export default function HeroBanner({text , icon1 ,icon2 } : {text?: string , ico
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="absolute top-20 right-50 md:right-60  "
+            className="absolute top-5 md:top-20 right-65 md:right-60  "
           >
             {icon2}
           </motion.div>
@@ -99,6 +113,4 @@ export default function HeroBanner({text , icon1 ,icon2 } : {text?: string , ico
       </motion.div>
     </section>
   );
-};
-
-
+}

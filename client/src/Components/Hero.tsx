@@ -1,8 +1,7 @@
 // Components/Hero.tsx
 import React from "react";
 import { motion } from "framer-motion";
-import { TypeAnimation } from 'react-type-animation';
-
+import { TypeAnimation } from "react-type-animation";
 
 import {
   Sprout,
@@ -14,6 +13,7 @@ import {
   Leaf,
   Sun,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero: React.FC = () => {
   return (
@@ -69,7 +69,6 @@ const Hero: React.FC = () => {
         <TreePine className="w-24 h-24 text-primary" strokeWidth={1.5} />
       </motion.div>
 
-
       <motion.div
         animate={{
           y: [0, 20, 0],
@@ -86,8 +85,6 @@ const Hero: React.FC = () => {
         <Pen className="w-24 h-24 text-third" strokeWidth={1.5} />
       </motion.div>
 
-
-
       <motion.div
         animate={{
           rotate: [0, 360],
@@ -100,9 +97,12 @@ const Hero: React.FC = () => {
         }}
         className="absolute top-10 left-10 md:top-21 md:left-31 xl:block"
       >
-        <Sun className="md:w-30 w-20 h-20 md:h-30 text-third" strokeWidth={1.5} />
+        <Sun
+          className="md:w-30 w-20 h-20 md:h-30 text-third"
+          strokeWidth={1.5}
+        />
       </motion.div>
-           <motion.div
+      <motion.div
         animate={{
           y: [0, 30, 0],
           x: [0, 15, 0],
@@ -121,7 +121,6 @@ const Hero: React.FC = () => {
           strokeWidth={1}
         />
       </motion.div>
-
 
       <div className="absolute top-81 left-45 hidden xl:block">
         <svg
@@ -160,8 +159,6 @@ const Hero: React.FC = () => {
           strokeWidth={1}
         />
       </motion.div>
-
-  
 
       <motion.div
         animate={{
@@ -240,26 +237,23 @@ const Hero: React.FC = () => {
           className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl max-w-5xl leading-tight"
         >
           كن جزءًا من عائلة
-          <span className="relative z-10 text-primary"> رُقي للشباب
-
-         
-          </span>
+          <span className="relative z-10 text-primary"> رُقي للشباب</span>
           <br />
-            <TypeAnimation 
-              sequence={[
-                'وشارك في صناعة الفرق',
-                2000,
-              'Anytime, Anywhere',
-                2000,
-                'With Expert Doctors',
-                2000,
-                'For Your Family',
-                2000,
-              ]}
-              wrapper="span"
-              speed={50}
-              repeat={Infinity}
-            />
+          <TypeAnimation
+            sequence={[
+              "وشارك في صناعة الفرق",
+              2000,
+              "Anytime, Anywhere",
+              2000,
+              "With Expert Doctors",
+              2000,
+              "For Your Family",
+              2000,
+            ]}
+            wrapper="span"
+            speed={50}
+            repeat={Infinity}
+          />
         </motion.h1>
 
         {/* Subtitle badge */}
@@ -269,7 +263,7 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="mt-6"
         >
-          <span className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full text-lg lg:text-xl font-semibold shadow-lg">
+          <span className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full text-md lg:text-xl font-semibold shadow-lg">
             <Users className="w-5 h-5" />
             جمعية رقي للشباب \ شلغوم العيد
           </span>
@@ -332,7 +326,10 @@ const Hero: React.FC = () => {
               <div
                 className={`${item.color} ${item.bgColor} p-4 hover:bg-third group bg-white rounded-2xl shadow-md group-hover:shadow-xl transition-all`}
               >
-                <item.icon className="w-8 h-8 group-hover:text-white transition-colors duration-300" strokeWidth={1.5} />
+                <item.icon
+                  className="w-8 h-8 group-hover:text-white transition-colors duration-300"
+                  strokeWidth={1.5}
+                />
               </div>
               <span className="text-sm font-medium text-slate-700">
                 {item.label}
@@ -348,6 +345,7 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.8, delay: 1.4 }}
           className="mt-12"
         >
+          <Link to="/about">
           <motion.button
             whileHover={{
               scale: 1.05,
@@ -356,9 +354,10 @@ const Hero: React.FC = () => {
             whileTap={{ scale: 0.95 }}
             className="group cursor-pointer inline-flex items-center gap-3 bg-primary hover:bg-secondary text-white px-10 py-5 rounded-full text-xl font-bold shadow-xl transition-all"
           >
-            انضم الآن
+            تعرف أكثر
             <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
           </motion.button>
+          </Link> 
         </motion.div>
 
         {/* Supporting text */}
@@ -377,8 +376,8 @@ const Hero: React.FC = () => {
 
 export default Hero;
 
-
-  {/* <motion.div
+{
+  /* <motion.div
         animate={{
           y: [0, 30, 0],
           rotate: [0, 10, 0],
@@ -391,4 +390,5 @@ export default Hero;
         className="absolute top-40 left-20 hidden lg:block"
       >
         <Sparkles className="w-12 h-12 text-primary/20" strokeWidth={1.5} />
-      </motion.div> */}
+      </motion.div> */
+}

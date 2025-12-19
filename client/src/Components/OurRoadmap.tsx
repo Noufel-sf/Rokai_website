@@ -2,33 +2,9 @@
 import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Target } from "lucide-react";
+import { futureGoals } from "../data";
+import HeadingText from "./ui/HeadingText";
 
-const futureGoals = [
-  {
-    year: "2026",
-    title: "توسيع النطاق",
-    description: "الوصول إلى 1000+ عضو نشط وافتتاح 3 مراكز جديدة",
-    color: "border-blue-500",
-  },
-  {
-    year: "2027",
-    title: "الشراكات الدولية",
-    description: "التعاون مع 10 منظمات دولية لتبادل الخبرات",
-    color: "border-purple-500",
-  },
-  {
-    year: "2028",
-    title: "التأثير الوطني",
-    description: "تنفيذ 100+ برنامج بيئي على مستوى الجزائر",
-    color: "border-green-500",
-  },
-  {
-    year: "2030",
-    title: "الريادة الإقليمية",
-    description: "أن نصبح المرجع الأول للمبادرات الشبابية البيئية",
-    color: "border-amber-500",
-  },
-];
 
 function OurRoadmap() {
   const timelineRef = React.useRef<HTMLDivElement>(null);
@@ -71,26 +47,12 @@ function OurRoadmap() {
 
       <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <p className="text-primary font-semibold text-lg mb-3">
-            خارطة الطريق
-          </p>
-          <h3 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
-            رحلتنا نحو{" "}
-            <span className="text-primary ">
-              المستقبل
-            </span>
-          </h3>
-          <p className="text-slate-600 text-lg max-w-2xl mx-auto">
-            خطة طموحة وواقعية لتحقيق رؤيتنا خلال السنوات القادمة
-          </p>
-        </motion.div>
+       <HeadingText 
+          heading="طريق رقي الشباب"
+          subheading="استكشف"
+          subheading2="منذ التأسيس"
+          description="اكتشف رؤيتنا المستقبلية وخططنا الطموحة لتطوير رُقي للشباب، حيث نهدف إلى توسيع نطاق تأثيرنا وتعزيز دورنا في تمكين الشباب وبناء مجتمع مستدام ومزدهر."
+        />
 
         {/* Timeline */}
         <div ref={timelineRef} className="relative max-w-4xl mx-auto">

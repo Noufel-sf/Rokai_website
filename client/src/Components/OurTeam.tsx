@@ -2,100 +2,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 import TeamMemberCard from "./TeamMemberCard";
+import HeadingText from "./ui/HeadingText";
+import { teamMembers } from "../data";
 
-interface TeamMember {
-  id: string;
-  name: string;
-  role: string;
-  bio: string;
-  image: string;
-  bgColor: string;
-  socials?: {
-    linkedin?: string;
-    twitter?: string;
-    email?: string;
-  };
-}
+
 
 const OurTeamSection: React.FC = () => {
-  const teamMembers: TeamMember[] = [
-    {
-      id: "1",
-      name: "أحمد بن محمد",
-      role: "المؤسس والرئيس",
-      bio: "قائد شغوف بالتغيير البيئي والتنمية المجتمعية، يسعى لبناء جيل واعٍ ومسؤول",
-      image: "/m.png",
-      bgColor: "bg-[#E8E4FF]", // Soft purple
-      socials: {
-        linkedin: "#",
-        twitter: "#",
-        email: "ahmed@rokai.org",
-      },
-    },
-    {
-      id: "2",
-      name: "فاطمة الزهراء",
-      role: "مديرة البرامج",
-      bio: "متخصصة في تطوير البرامج التعليمية والتربوية للأطفال والشباب",
-      image: "/m.png",
-      bgColor: "bg-[#FFE8E8]", // Soft pink/peach
-      socials: {
-        linkedin: "#",
-        email: "fatima@rokai.org",
-      },
-    },
-    {
-      id: "3",
-      name: "عمر الصديق",
-      role: "منسق المشاريع البيئية",
-      bio: "خبير في الاستدامة البيئية وتنسيق المبادرات الخضراء والحملات التوعوية",
-      image: "/m.png",
-      bgColor: "bg-[#E8F4FF]", // Soft blue
-      socials: {
-        linkedin: "#",
-        twitter: "#",
-        email: "omar@rokai.org",
-      },
-    },
-    {
-      id: "4",
-      name: "ليلى حسن",
-      role: "مسؤولة التواصل الاجتماعي",
-      bio: "متخصصة في بناء المجتمعات الرقمية وتعزيز التواصل مع الشباب",
-      image: "/m.png",
-      bgColor: "bg-[#FFF8E8]", // Soft yellow/cream
-      socials: {
-        linkedin: "#",
-        twitter: "#",
-        email: "layla@rokai.org",
-      },
-    },
-    {
-      id: "5",
-      name: "يوسف العلي",
-      role: "منسق الفعاليات",
-      bio: "مختص في تنظيم وإدارة الفعاليات والورش التدريبية للشباب",
-      image: "/m.png",
-      bgColor: "bg-[#E8FFE8]", // Soft green
-      socials: {
-        linkedin: "#",
-        email: "youssef@rokai.org",
-      },
-    },
-    {
-      id: "6",
-      name: "سارة المنصور",
-      role: "مسؤولة التطوع",
-      bio: "تدير برامج التطوع وتنسيق المتطوعين في مختلف المبادرات والأنشطة",
-      image: "/m.png",
-      bgColor: "bg-[#FFE8F4]", // Soft rose
-      socials: {
-        linkedin: "#",
-        twitter: "#",
-        email: "sara@rokai.org",
-      },
-    },
-  ];
+ 
 
   return (
     <section className="relative py-20 lg:py-32  overflow-hidden">
@@ -112,48 +25,12 @@ const OurTeamSection: React.FC = () => {
       />
 
       <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16 lg:mb-20"
-        >
-          <motion.p
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-primary font-semibold text-lg mb-3"
-          >
-            تعرف على الأشخاص المميزين
-          </motion.p>
-
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-4xl lg:text-5xl font-bold text-slate-900 mb-4"
-          >
-            تعرف على فريق{" "}
-            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              الخبراء
-            </span>
-          </motion.h2>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-slate-600 text-lg max-w-3xl mx-auto"
-          >
-            مجموعة من الأفراد المتحمسين والموهوبين الذين يعملون معاً لتحقيق رؤيتنا
-            وبناء مجتمع أفضل
-          </motion.p>
-        </motion.div>
+       <HeadingText   
+          heading="فريق رُقي للشباب"
+          subheading="تعرف على"
+          subheading2="فريقنا المميز"
+          description="تعرف على فريق رُقي للشباب، مجموعة من الأفراد المتفانين والشغوفين الذين يعملون بلا كلل لتمكين الشباب وبناء مستقبل أفضل من خلال المبادرات المجتمعية والتعليمية والبيئية."
+        />
 
         {/* Team Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
