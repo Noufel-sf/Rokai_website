@@ -223,7 +223,7 @@ const Hero: React.FC = () => {
           className="mb-2"
         >
           <img
-            src="/rokailogo.png"
+            src="/rokailogo.svg"
             alt="Rokai Logo"
             className="w-48 lg:w-56 drop-shadow-lg"
           />
@@ -245,7 +245,7 @@ const Hero: React.FC = () => {
               2000,
               "Anytime, Anywhere",
               2000,
-              "With Expert Doctors",
+              "With Expert Mentors",
               2000,
               "For Your Family",
               2000,

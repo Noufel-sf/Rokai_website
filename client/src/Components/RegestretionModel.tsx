@@ -123,7 +123,7 @@ const RegistrationModal: React.FC<RegistrationModalProps> = ({
               </div>
 
               {/* Actions */}
-              <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-between sm:items-center">
+              <div className="mt-6 flex flex-col-reverse gap-3 sm:flex-row sm:justify-between sm:items-center">
                 <button
                   type="button"
                   onClick={onClose}

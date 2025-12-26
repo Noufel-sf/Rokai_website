@@ -80,7 +80,7 @@ const ContactSection: React.FC = () => {
               <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
                 <div className="relative w-full aspect-[4/3] lg:aspect-square">
                   <img
-                    src="/Podcast.png"
+                    src="/Podcast.svg"
                     alt="تواصل مع فريق روكاي"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
@@ -182,7 +182,7 @@ const ContactSection: React.FC = () => {
           {/* Map Embed */}
           <div className="relative w-full h-[400px] lg:h-[500px] bg-slate-200">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.95373631531654!3d-37.81720997975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d9b4c1c0b8e!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3221.214498421827!2d6.1680614890718735!3d36.1613346323918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12f3c3c777d1754d%3A0x4100c9c017aaeff2!2z2K_Yp9ixINin2YTYtNio2KfYqA!5e0!3m2!1sfr!2sdz!4v1766782344820!5m2!1sfr!2sdz"
               width="100%"
               height="100%"
               style={{ border: 0 }}

@@ -64,7 +64,7 @@ const OurVisionSection: React.FC = () => {
               transition={{ type: "spring", stiffness: 200, delay: 0.2 }}
               className="flex items-start justify-start w-40 h-40  rounded-3xl mb-2"
             >
-              <img src="/rokailogo.png" alt="" />
+              <img src="/rokailogo.svg" alt="" />
             </motion.div>
 
             <motion.span
@@ -111,7 +111,7 @@ const OurVisionSection: React.FC = () => {
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <div className="relative h-[500px] lg:h-[600px]">
                 <img
-                  src="/why.png"
+                  src="/story.svg"
                   alt="Our Vision"
                   className="object-cover w-full h-full -z-10"
                 />

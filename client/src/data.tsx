@@ -2,7 +2,7 @@ interface SocialLinkData {
   icon: React.ElementType;
   title: string;
   content: string;
-  link: string;
+  link?: string;
   gradient: string;
   bgColor: string;
 }
@@ -27,24 +27,17 @@ export const socialLinks: SocialLinkData[] = [
   {
     icon: Phone,
     title: "اتصل بنا",
-    content: "00 82773 83837",
-    link: "tel:+0082773838837",
+    content: "0667 60 33 55",
+    link: "https://instagram.com/rokay_chabab",
     gradient: "from-green-500 to-emerald-600",
     bgColor: "bg-green-50",
   },
-  {
-    icon: MessageCircle,
-    title: "واتساب",
-    content: "00 82773 83837",
-    link: "https://wa.me/0082773838837",
-    gradient: "from-emerald-500 to-teal-600",
-    bgColor: "bg-emerald-50",
-  },
+  
   {
     icon: Mail,
     title: "البريد الإلكتروني",
-    content: "info@rokay.org",
-    link: "mailto:info@rokay.org",
+    content: "rokaychabab@gmail.com",
+    link: "mailto:rokaychabab@gmail.com",
     gradient: "from-purple-500 to-violet-600",
     bgColor: "bg-purple-50",
   },
@@ -60,7 +53,7 @@ export const socialLinks: SocialLinkData[] = [
     icon: Facebook,
     title: "فيسبوك",
     content: "رُقي للشباب | Rokay",
-    link: "https://facebook.com/rokay",
+    link: "https://www.facebook.com/roquaiCH?locale=fr_FR",
     gradient: "from-blue-600 to-indigo-700",
     bgColor: "bg-blue-50",
   },
@@ -182,7 +175,7 @@ export const events: Event[] = [
     title: "ورشة الزراعة المستدامة",
     description:
       "تعلم أساسيات الزراعة العضوية والمستدامة مع خبراء البيئة. ورشة عملية تشمل التطبيق العملي في حديقة المجتمع.",
-    image: "/event.png",
+    image: "/e1.jpg",
     date: "15 يناير 2026",
     location: "حديقة المجتمع، شلغوم العيد",
     attendees: 45,
@@ -196,7 +189,7 @@ export const events: Event[] = [
     title: "مهرجان الشباب الثقافي",
     description:
       "احتفال سنوي يجمع الشباب لعرض مواهبهم الفنية والثقافية. يشمل عروض موسيقية، مسرح، ومعارض فنية.",
-    image: "/event.png",
+    image: "/e2.jpg",
     date: "22 يناير 2026",
     location: "المركز الثقافي",
     attendees: 200,
@@ -210,7 +203,7 @@ export const events: Event[] = [
     title: "يوم تنظيف الشاطئ",
     description:
       "مبادرة بيئية جماعية لتنظيف الشاطئ المحلي والحفاظ على البيئة البحرية. انضم إلينا لصنع الفرق!",
-    image: "/event.png",
+    image: "/e3.jpg",
     date: "5 فبراير 2026",
     location: "شاطئ المدينة",
     attendees: 80,
@@ -224,7 +217,7 @@ export const events: Event[] = [
     title: "ملتقى الابتكار الشبابي",
     description:
       "منصة للشباب المبدعين لعرض أفكارهم ومشاريعهم الابتكارية. فرصة للتواصل مع رواد الأعمال والمستثمرين.",
-    image: "/event.png",
+    image: "/e4.png",
     date: "10 ديسمبر 2025",
     location: "مركز الابتكار",
     attendees: 120,
@@ -238,7 +231,7 @@ export const events: Event[] = [
     title: "برنامج دعم الأطفال",
     description:
       "يوم ترفيهي وتعليمي للأطفال يشمل ألعاب تربوية، ورش فنية، وأنشطة رياضية في جو من المرح والتعلم.",
-    image: "/event.png",
+    image: "/e5.png",
     date: "28 نوفمبر 2025",
     location: "نادي الأطفال",
     attendees: 60,
@@ -252,7 +245,7 @@ export const events: Event[] = [
     title: "حملة زراعة الأشجار",
     description:
       "مبادرة بيئية لزراعة 1000 شجرة في مختلف أنحاء المدينة. ساهم في جعل مدينتنا أكثر خضرة واستدامة.",
-    image: "/event.png",
+    image: "/e6.png",
     date: "15 نوفمبر 2025",
     location: "عدة مواقع في المدينة",
     attendees: 150,
@@ -274,21 +267,21 @@ export interface Memory {
 export const memories: Memory[] = [
   {
     id: "1",
-    image: "/mem1.png",
+    image: "/mem1.svg",
     rotation: 0,
     scale: 1,
     delay: 0.1,
   },
   {
     id: "2",
-    image: "/mem2.png",
+    image: "/mem2.svg",
     rotation: 0,
     scale: 1.4,
     delay: 0.2,
   },
   {
     id: "3",
-    image: "/mem3.png",
+    image: "/mem3.svg",
     rotation: 0,
     scale: 1.4,
 
@@ -296,28 +289,28 @@ export const memories: Memory[] = [
   },
   {
     id: "4",
-    image: "/mem4.png",
+    image: "/mem4.svg",
     rotation: 0,
     scale: 1.4,
     delay: 0.4,
   },
   {
     id: "5",
-    image: "/mem5.png",
+    image: "/mem5.svg",
     rotation: 0,
     scale: 1.4,
     delay: 0.5,
   },
   {
     id: "6",
-    image: "/mem6.png",
+    image: "/mem6.svg",
     rotation: 0,
     scale: 1.4,
     delay: 0.6,
   },
   {
     id: "7",
-    image: "/mem7.png",
+    image: "/mem7.svg",
     rotation: 0,
     scale: 1.4,
     delay: 0.6,
@@ -326,12 +319,12 @@ export const memories: Memory[] = [
     id: "8",
     rotation: 0,
     scale: 1.4,
-    image: "/mem8.png",
+    image: "/mem8.svg",
     delay: 0.6,
   },
   {
     id: "9",
-    image: "/mem9.png",
+    image: "/mem9.svg",
     rotation: 0,
     scale: 1.4,
     delay: 0.6,
@@ -367,7 +360,7 @@ export const faqs: FAQ[] = [
     id: "4",
     question: "ما هي الفئة العمرية المستهدفة للمشاركة؟",
     answer:
-      "جمعيتنا مفتوحة بشكل رئيسي للشباب من سن 15 إلى 35 عاماً. ومع ذلك، نرحب بجميع الأعمار للمشاركة في فعاليات محددة، خاصة العائلات في البرامج الخاصة بالأطفال والأنشطة البيئية المجتمعية.",
+      "جمعيتنا مفتوحة بشكل رئيسي للشباب من سن 18 إلى 35 عاماً. ومع ذلك، نرحب بجميع الأعمار للمشاركة في فعاليات محددة، خاصة العائلات في البرامج الخاصة بالأطفال والأنشطة البيئية المجتمعية.",
   },
   {
     id: "5",
@@ -379,14 +372,9 @@ export const faqs: FAQ[] = [
     id: "6",
     question: "أين يقع مقر الجمعية وما هي ساعات العمل؟",
     answer:
-      "مقرنا الرئيسي يقع في شلغوم العيد. نحن متواجدون من الأحد إلى الخميس من الساعة 9 صباحاً حتى 5 مساءً. يمكنك زيارتنا خلال هذه الأوقات أو التواصل معنا عبر وسائل التواصل الاجتماعي أو البريد الإلكتروني في أي وقت.",
+      "مقرنا الرئيسي يقع في شلغوم العيد.  يمكنك  التواصل معنا عبر وسائل التواصل الاجتماعي أو البريد الإلكتروني في أي وقت.",
   },
-  {
-    id: "7",
-    question: "كيف يتم تمويل أنشطة الجمعية؟",
-    answer:
-      "نعتمد على مزيج من التبرعات، الدعم المجتمعي، الشراكات مع المؤسسات المحلية، والمنح الحكومية. جميع التبرعات تذهب مباشرة لدعم برامجنا وأنشطتنا. نحن شفافون تماماً في استخدام الأموال ونقدم تقارير منتظمة لأعضائنا.",
-  },
+  
   {
     id: "8",
     question: "هل تقدم الجمعية برامج تدريبية أو تعليمية؟",
@@ -458,6 +446,8 @@ export interface TeamMember {
     email?: string;
   };
 }
+
+
 export const teamMembers: TeamMember[] = [
   {
     id: "1",

@@ -144,7 +144,7 @@ export const Footer: React.FC = () => {
 
                 <motion.img
                   whileHover={{ scale: 1.05 }}
-                  src="/rokailogo.png"
+                  src="/rokailogo.svg"
                   alt="رقي للشباب"
                   className="h-16 w-auto"
                   />

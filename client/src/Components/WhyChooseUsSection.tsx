@@ -37,7 +37,7 @@ export const WhyChooseUsSection: React.FC = () => {
           >
             <div className="overflow-hidden rounded-3xl  relative">
               <img
-                src="/why2.png"
+                src="/why2.svg"
                 alt="رقي للشباب - مجتمع نشط"
                 className="h-100 w-full object-cover"
               />

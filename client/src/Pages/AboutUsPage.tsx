@@ -33,7 +33,7 @@ const AboutUsPage: React.FC = () => {
       <OurVisionSection />
       <OurRoadmap />
       <OurStorySection />
-      <OurTeamSection />
+      {/* <OurTeamSection /> */}
       <CTASection />
     </main>
   );

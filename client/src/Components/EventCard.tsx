@@ -140,7 +140,7 @@ const EventCard: React.FC<EventCardProps> = ({
             whileTap={{ scale: 0.98 }}
             className="w-full mt-4 cursor-pointer flex items-center justify-center gap-2 bg-primary hover:bg-secondary text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 group-hover:shadow-lg group-hover:shadow-primary/30"
           >
-            <span>Learn More</span>
+            <span> اعرف المزيد </span>
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </motion.button>
         </div>
