@@ -12,8 +12,8 @@ interface EventCardProps {
   location: string;
   attendees?: number;
   duration?: string;
-  status: "upcoming" | "completed";
   tags: string[];
+  link: string;
   gradient?: string;
 }
 
@@ -25,11 +25,17 @@ const EventCard: React.FC<EventCardProps> = ({
   location,
   attendees,
   duration,
-  status,
   tags,
+  link,
   gradient = "from-primary to-secondary",
 }) => {
   return (
+    <a 
+      href={link}
+      target={link.startsWith("http") ? "_blank" : undefined}
+      rel={link.startsWith("http") ? "noopener noreferrer" : undefined}
+    >
+
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -40,20 +46,7 @@ const EventCard: React.FC<EventCardProps> = ({
     >
       <div className="relative h-full cursor-pointer rounded-3xl overflow-hidden shadow-xl transition-all duration-300 group-hover:shadow-2xl">
         {/* Status Badge */}
-        <div className="absolute top-4 left-4 z-10">
-          <motion.span
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0.2, type: "spring" }}
-            className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold ${
-              status === "completed"
-                ? "bg-emerald-500/90 text-white"
-                : "bg-amber-500/90 text-white"
-            } backdrop-blur-sm`}
-          >
-            {status === "completed" ? "Completed" : "Upcoming"}
-          </motion.span>
-        </div>
+       
 
         {/* Event Image with Overlay */}
         <div className="relative h-64 overflow-hidden">
@@ -88,7 +81,7 @@ const EventCard: React.FC<EventCardProps> = ({
           <div className="flex flex-wrap gap-2">
             {tags.slice(0, 3).map((tag, index) => (
               <span
-                key={index}
+              key={index}
                 className="px-3 py-1 bg-secondary backdrop-blur-sm  text-xs rounded-full border border-slate-700/50 hover:border-primary/50 transition-colors"
               >
                 {tag}
@@ -151,6 +144,7 @@ const EventCard: React.FC<EventCardProps> = ({
         </div>
       </div>
     </motion.div>
+                </a>
   );
 };
 

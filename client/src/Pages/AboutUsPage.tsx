@@ -12,7 +12,6 @@ import {
   Mail,
   Sun,
 } from "lucide-react";
-// import AboutUsHero from "../Components/AboutUsHero";
 import MissionSection from "../Components/MissionSection";
 import OurStorySection from "../Components/OurStorySection";
 import CTASection from "../Components/CTASection";
@@ -27,8 +26,18 @@ const AboutUsPage: React.FC = () => {
     <main className="overflow-x-hidden">
       <HeroBanner
         text="من نحن"
-        icon1={<Sparkles className="w-13 h-10  md:w-26 md:h-26 text-white" strokeWidth={1.5} />}
-        icon2={<Sun className="w-10 h-10  md:w-26 md:h-26 text-white" strokeWidth={1.5} />}
+        icon1={
+          <Sparkles
+            className="w-13 h-10  md:w-26 md:h-26 text-white"
+            strokeWidth={1.5}
+          />
+        }
+        icon2={
+          <Sun
+            className="w-10 h-10  md:w-26 md:h-26 text-white"
+            strokeWidth={1.5}
+          />
+        }
       />
       <OurVisionSection />
       <OurRoadmap />

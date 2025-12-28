@@ -210,9 +210,9 @@ const ContactSection: React.FC = () => {
                   موقعنا
                 </h4>
                 <p className="text-slate-600 text-sm mb-3">
-                  شارع 102، 2281 كالاسان
+                  شارع البوسيسي
                   <br />
-                  الجزائر
+                  دار الشباب شلغوم العيد، ميلة
                 </p>
                 <a
                   href="https://maps.google.com/?q=your-location"

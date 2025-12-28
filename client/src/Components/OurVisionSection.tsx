@@ -86,9 +86,8 @@ const OurVisionSection: React.FC = () => {
 
             <div className="space-y-6 mb-8">
               <p className="text-slate-600 text-lg lg:text-xl leading-relaxed">
-                نتطلع إلى مجتمع شبابي واعٍ ومسؤول، يساهم بفعالية في بناء مستقبل
-                بيئي واجتماعي أفضل للأجيال القادمة. نطمح لأن نكون المنصة الرائدة
-                التي تجمع بين حماية البيئة والتنمية المجتمعية.
+                بناء جيل شبابي واعٍ، مسؤول وفاعل، يساهم في تنمية المجتمع ويقود
+                التغيير الإيجابي في بيئة صحية قائمة على القيم والابتكار.
               </p>
 
               <div className="bg-gradient-to-br from-primary/10 to-secondary/10 rounded-2xl p-6 border-l-4 border-primary">
@@ -128,21 +127,21 @@ const OurVisionSection: React.FC = () => {
                 <div className="grid grid-cols-3 gap-4 text-center">
                   <div>
                     <div className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                      2030
+                         10 years
                     </div>
                     <div className="text-xs text-slate-600 mt-1">
-                      هدفنا الكبير
+                      الخبرة
                     </div>
                   </div>
                   <div>
                     <div className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                      10+
+                      20+
                     </div>
-                    <div className="text-xs text-slate-600 mt-1">مراكز</div>
+                    <div className="text-xs text-slate-600 mt-1  ">الاحداث</div>
                   </div>
                   <div>
                     <div className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                      5000+
+                      200+
                     </div>
                     <div className="text-xs text-slate-600 mt-1">عضو</div>
                   </div>

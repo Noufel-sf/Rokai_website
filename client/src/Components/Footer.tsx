@@ -21,9 +21,6 @@ export const Footer: React.FC = () => {
 
   const quickLinks = [
     { name: "من نحن", href: "/about" },
-    { name: "برامجنا", href: "/programs" },
-    { name: "الفعاليات", href: "/events" },
-    { name: "المدونة", href: "/blog" },
     { name: "تواصل معنا", href: "/contact" },
   ];
 
@@ -36,11 +33,9 @@ export const Footer: React.FC = () => {
   ];
 
   const resources = [
-    { name: "مركز المساعدة", href: "/help" },
-    { name: "الأسئلة الشائعة", href: "/faq" },
-    { name: "المعرض", href: "/gallery" },
-    { name: "التقارير السنوية", href: "/reports" },
-    { name: "الشراكات", href: "/partnerships" },
+    { name: "مركز المساعدة", href: "/contact" },
+    { name: "الأسئلة الشائعة", href: "/" },
+    { name: "المعرض", href: "/" },
   ];
 
   const socialLinks = [
@@ -56,18 +51,7 @@ export const Footer: React.FC = () => {
       icon: Instagram,
       color: "hover:bg-gradient-to-br hover:from-purple-600 hover:to-pink-600",
     },
-    {
-      name: "Twitter",
-      href: "https://twitter.com/rokaiclub",
-      icon: Twitter,
-      color: "hover:bg-sky-500",
-    },
-    {
-      name: "Youtube",
-      href: "https://youtube.com/@rokaiclub",
-      icon: Youtube,
-      color: "hover:bg-red-600",
-    },
+  
   ];
 
   return (
@@ -87,48 +71,9 @@ export const Footer: React.FC = () => {
       <div className="absolute bottom-20 left-20 w-64 h-64 bg-secondary/10 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
-        {/* Newsletter Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="py-12 lg:py-16 border-b border-slate-700"
-        >
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h3 className="text-2xl lg:text-3xl font-bold mb-3">
-                اشترك في نشرتنا الإخبارية
-              </h3>
-              <p className="text-slate-400 text-lg">
-                احصل على آخر الأخبار والفعاليات مباشرة في بريدك الإلكتروني
-              </p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-3">
-              <div className="relative flex-1">
-                <Mail className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
-                <input
-                  type="email"
-                  placeholder="أدخل بريدك الإلكتروني"
-                  className="w-full pr-12 pl-4 py-4 bg-slate-800 border border-slate-700 rounded-xl text-white placeholder:text-slate-500 focus:outline-none focus:border-primary transition-colors"
-                  dir="rtl"
-                />
-              </div>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-primary to-secondary px-8 py-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all whitespace-nowrap"
-              >
-                <span>اشترك الآن</span>
-                <Send className="w-5 h-5" />
-              </motion.button>
-            </div>
-          </div>
-        </motion.div>
-
+     
         {/* Main Footer Content */}
-        <div className="py-12 lg:py-16">
+        <div className="py-16 lg:py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-12">
             {/* Brand Section */}
             <motion.div
@@ -165,17 +110,17 @@ export const Footer: React.FC = () => {
                   <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-primary transition-colors">
                     <Phone className="w-5 h-5" />
                   </div>
-                  <span dir="ltr">+213 123 456 789</span>
+                  <span dir="ltr">0667 60 33 55</span>
                 </a>
 
                 <a
-                  href="mailto:info@rokaiclub.org"
+                  href="mailto:rokaychabab@gmail.com"
                   className="flex items-center gap-3 text-slate-400 hover:text-white transition-colors group"
                 >
                   <div className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-primary transition-colors">
                     <Mail className="w-5 h-5" />
                   </div>
-                  <span>info@rokaiclub.org</span>
+                  <span>rokaychabab@gmail.com</span>
                 </a>
 
                 <a

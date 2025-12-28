@@ -34,15 +34,13 @@ const OurStorySection: React.FC = () => {
 
             <div className="space-y-6 mb-8">
               <p className="text-slate-600 text-lg leading-relaxed">
-                بدأت رحلتنا في عام 2019 بمجموعة صغيرة من الشباب الذين آمنوا بأن
+                بدأت رحلتنا في عام 2016 بمجموعة صغيرة من الشباب الذين آمنوا بأن
                 التغيير الحقيقي يبدأ من المجتمع المحلي. كانت الفكرة بسيطة: كيف
                 يمكننا الجمع بين حماية البيئة ورعاية الأطفال لخلق تأثير مضاعف؟
               </p>
 
               <p className="text-slate-600 text-lg leading-relaxed">
-                اليوم، نحن فخورون بكوننا جمعية رائدة تضم أكثر من 500 عضو نشط،
-                ننظم أكثر من 50 برنامجاً سنوياً، ونتعاون مع عشرات المنظمات
-                المحلية والدولية لتحقيق رؤيتنا.
+                تعمل جمعية رُقيّ للشباب على تنمية وتأطير قدرات الشباب، وصقل مهاراتهم القيادية والفكرية، والاهتمام بقضاياهم الاجتماعية والثقافية، من أجل إعداد نخبة شبابية فاعلة قادرة على المبادرة والمشاركة الإيجابية في بناء المجتمع
               </p>
             </div>
 
@@ -125,7 +123,7 @@ const OurStorySection: React.FC = () => {
               className="absolute -bottom-6 -left-6 bg-gradient-to-br from-primary to-secondary text-white p-6 rounded-2xl shadow-2xl"
             >
               <div className="text-center">
-                <div className="text-3xl font-bold">5+</div>
+                <div className="text-3xl font-bold">10+</div>
                 <div className="text-sm">سنوات من النجاح</div>
               </div>
             </motion.div>

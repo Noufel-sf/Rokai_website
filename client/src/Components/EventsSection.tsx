@@ -7,13 +7,7 @@ import { events } from "../data";
 import HeadingText from "./ui/HeadingText";
 
 const EventsSection: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<"upcoming" | "past">("upcoming");
 
-  const filteredEvents = events.filter((event) =>
-    activeTab === "upcoming"
-      ? event.status === "upcoming"
-      : event.status === "completed"
-  );
 
   return (
     <section className=" py-20 lg:py-32 overflow-hidden">
@@ -66,44 +60,14 @@ const EventsSection: React.FC = () => {
     />
         </motion.div>
 
-        {/* Tabs */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="flex justify-center mb-12"
-        >
-          <div className="inline-flex bg-secondary p-1.5 rounded-2xl">
-            <button
-              onClick={() => setActiveTab("upcoming")}
-              className={`px-8 py-3 cursor-pointer rounded-xl font-semibold transition-all duration-300 ${
-                activeTab === "upcoming"
-                  ? "bg-third text-white shadow-lg"
-                  : "text-black hover:text-white"
-              }`}
-            >
-              Upcoming Events
-            </button>
-            <button
-              onClick={() => setActiveTab("past")}
-              className={`px-8 py-3 rounded-xl cursor-pointer font-semibold transition-all duration-300 ${
-                activeTab === "past"
-                  ? "bg-third text-white shadow-lg"
-                  : "text-black hover:text-white"
-              }`}
-            >
-              Past Events
-            </button>
-          </div>
-        </motion.div>
+       
 
         {/* Events Grid */}
         <motion.div
           layout
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {filteredEvents.map((event, index) => (
+          {events.map((event, index) => (
             <motion.div
               key={event.id}
               layout
@@ -118,7 +82,7 @@ const EventsSection: React.FC = () => {
         </motion.div>
 
         {/* Empty State */}
-        {filteredEvents.length === 0 && (
+        {events.length === 0 && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

@@ -12,6 +12,7 @@ import {
   Pen,
   Leaf,
   Sun,
+  Sparkles,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -115,11 +116,7 @@ const Hero: React.FC = () => {
         }}
         className="absolute top-11 right-11 md:top-22 md:left-74  lg:block"
       >
-        <Heart
-          className="w-16 h-16 text-secondary"
-          fill="currentColor"
-          strokeWidth={1}
-        />
+        <Sparkles className="md:w-24 w-16 h-16 md:h-24 text-secondary" strokeWidth={1.5} />
       </motion.div>
 
       <div className="absolute top-81 left-45 hidden xl:block">
@@ -225,6 +222,8 @@ const Hero: React.FC = () => {
           <img
             src="/rokailogo.svg"
             alt="Rokai Logo"
+            fetchPriority="high"
+            loading="eager"
             className="w-48 lg:w-56 drop-shadow-lg"
           />
         </motion.div>
