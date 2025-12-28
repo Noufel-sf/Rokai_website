@@ -166,7 +166,7 @@ export const WhyChooseUsSection: React.FC = () => {
               <div className="grid grid-cols-3 gap-6 text-center">
                 <div>
                   <span className="text-3xl text-primary font-extrabold">
-                    50+
+                    10+
                   </span>
                   <div className="text-sm text-slate-600 mt-1">
                     برنامج سنوياً
@@ -180,7 +180,7 @@ export const WhyChooseUsSection: React.FC = () => {
                 </div>
                 <div>
                   <span className="text-3xl text-primary font-extrabold">
-                    5+
+                    10+
                   </span>
                   <div className="text-sm text-slate-600 mt-1">سنوات خبرة</div>
                 </div>
