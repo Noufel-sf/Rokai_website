@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ArrowLeft, Sparkles } from "lucide-react";
 import RegisterationTrigger from "./ui/RegisterationTrigger";
+import { memo } from "react";
 
 const CTASection: React.FC = () => {
   return (
@@ -83,4 +84,4 @@ const CTASection: React.FC = () => {
   );
 };
 
-export default CTASection;
+export default memo(CTASection);

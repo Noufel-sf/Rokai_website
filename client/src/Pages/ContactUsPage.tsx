@@ -1,6 +1,7 @@
 import React from "react";
 import AboutUsHero from "../Components/HeroBanner";
 import ContactSection from "../Components/ContactSection";
+import { memo } from "react";
 import FAQSection from "../Components/FaQSection";
 import { Sparkles, Sun } from "lucide-react";
 import HeroBanner from "../Components/HeroBanner";
@@ -19,4 +20,4 @@ function ContactUsPage() {
   );
 }
 
-export default ContactUsPage;
+export default memo(ContactUsPage);

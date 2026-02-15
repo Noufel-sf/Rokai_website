@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import RegistrationTrigger from "./ui/RegisterationTrigger";
+import { memo } from "react";
 import {
   Sprout,
   Heart,
@@ -135,10 +136,12 @@ export const WhyChooseUsSection: React.FC = () => {
             >
               {/* <RegistrationTrigger>
                 {({ onClick }) => ( */}
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdLcOeL8-yHfZrs4sMzfxGLyAHj7C44DzLCA4zVkAbLvwHwWA/viewform?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAb21jcAP-4VJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAafEcH40LKYTB47xd6hmJNqSwzEFDU8fYnXW48jze8U7LnpTS0qLihcpNt7l2Q_aem_Yzas6PC-tnKmYWeKMKMB_w">
+              <a
+              className="w-full md:w-auto" 
+              href="https://docs.google.com/forms/d/e/1FAIpQLSdLcOeL8-yHfZrs4sMzfxGLyAHj7C44DzLCA4zVkAbLvwHwWA/viewform?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAb21jcAP-4VJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAafEcH40LKYTB47xd6hmJNqSwzEFDU8fYnXW48jze8U7LnpTS0qLihcpNt7l2Q_aem_Yzas6PC-tnKmYWeKMKMB_w">
                   <button
                     // onClick={onClick}
-                    className="inline-flex items-center justify-center gap-2 rounded-full bg-primary hover:bg-secondary cursor-pointer px-8 py-4 font-bold text-white shadow-lg hover:shadow-xl transition-all"
+                    className="inline-flex w-full md:w-auto items-center justify-center gap-2 rounded-full bg-primary hover:bg-secondary cursor-pointer px-8 py-4 font-bold text-white shadow-lg hover:shadow-xl transition-all"
                   >
                     انضم الآن
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -150,7 +153,7 @@ export const WhyChooseUsSection: React.FC = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-white border-2 border-slate-200 px-8 py-4 font-semibold text-slate-700 hover:border-primary hover:text-primary transition-all"
+                  className="inline-flex w-full md:w-auto cursor-pointer items-center justify-center gap-2 rounded-full bg-white border-2 border-slate-200 px-8 py-4 font-semibold text-slate-700 hover:border-primary hover:text-primary transition-all"
                 >
                   <span>تعرف علينا أكثر</span>
                 </motion.button>
@@ -195,4 +198,4 @@ export const WhyChooseUsSection: React.FC = () => {
   );
 };
 
-export default WhyChooseUsSection;
+export default memo(WhyChooseUsSection);

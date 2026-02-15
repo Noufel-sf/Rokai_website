@@ -180,13 +180,18 @@ const Navbar: React.FC = () => {
                   animate="open"
                   className="pt-2"
                 >
+                  <a
+                  className="w-full sm:w-auto" 
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSdLcOeL8-yHfZrs4sMzfxGLyAHj7C44DzLCA4zVkAbLvwHwWA/viewform?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAb21jcAP-4VJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAafEcH40LKYTB47xd6hmJNqSwzEFDU8fYnXW48jze8U7LnpTS0qLihcpNt7l2Q_aem_Yzas6PC-tnKmYWeKMKMB_w">
+
                   <button
                     className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-primary hover:bg-secondary text-white py-3 text-sm font-bold shadow-lg transition-all"
                     onClick={() => setIsOpen(false)}
-                  >
+                    >
                     انضم الآن
                     <ArrowRight className="w-5 h-5" />
                   </button>
+                    </a>
                 </motion.div>
               </div>
             </motion.div>
