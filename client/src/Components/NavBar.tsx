@@ -79,17 +79,20 @@ const Navbar: React.FC = () => {
 
         {/* Desktop CTA */}
         <div className="hidden md:block">
-          <RegistrationTrigger>
-            {({ onClick }) => (
+          {/* <RegistrationTrigger>
+            {({ onClick }) => ( */}
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdLcOeL8-yHfZrs4sMzfxGLyAHj7C44DzLCA4zVkAbLvwHwWA/viewform?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAb21jcAP-4VJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAafEcH40LKYTB47xd6hmJNqSwzEFDU8fYnXW48jze8U7LnpTS0qLihcpNt7l2Q_aem_Yzas6PC-tnKmYWeKMKMB_w">
+              
               <button
-                onClick={onClick}
+                // onClick={onClick}
                 className="group cursor-pointer inline-flex items-center gap-3 bg-primary hover:bg-secondary text-white px-5 py-2.5 rounded-full text-sm font-bold shadow-lg transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
               >
                 انضم الآن
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
-            )}
-          </RegistrationTrigger>
+            </a>
+            {/* )}
+          </RegistrationTrigger> */}
         </div>
 
         {/* Mobile menu button */}

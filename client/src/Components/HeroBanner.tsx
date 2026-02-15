@@ -53,10 +53,12 @@ export default function HeroBanner({
               # نضم إلينا اليوم واكتشف كيف يمكنك إحداث فرق حقيقي في مجتمعك
             </motion.p>
 
-            <RegisterationTrigger>
-              {({ onClick }) => (
+            {/* <RegisterationTrigger> */}
+              {/* {({ onClick }) => ( */}
+
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSdLcOeL8-yHfZrs4sMzfxGLyAHj7C44DzLCA4zVkAbLvwHwWA/viewform?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAb21jcAP-4VJleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAafEcH40LKYTB47xd6hmJNqSwzEFDU8fYnXW48jze8U7LnpTS0qLihcpNt7l2Q_aem_Yzas6PC-tnKmYWeKMKMB_w">
                 <motion.button
-                  onClick={onClick}
+                  // onClick={onClick}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -73,8 +75,9 @@ export default function HeroBanner({
                     ←
                   </motion.span>
                 </motion.button>
-              )}
-            </RegisterationTrigger>
+              </a>
+              {/* )} */}
+            {/* </RegisterationTrigger> */}
           </div>
 
           {/* Decorative Gradient Orbs */}
