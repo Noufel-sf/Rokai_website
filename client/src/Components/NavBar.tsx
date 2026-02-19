@@ -9,6 +9,7 @@ const navLinks = [
   { label: "Home", to: "/" },
   { label: "About", to: "/about" },
   { label: "Contact", to: "/contact" },
+  { label: "Register", to: "/register" },
 ];
 
 const Navbar: React.FC = () => {
