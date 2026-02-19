@@ -30,7 +30,7 @@ const OurVisionSection: React.FC = () => {
         }}
         className="absolute top-20 left-60 lg:left-120 md:left-120 md:w-20 md:h-20 w-15 h-15  "
       >
-        <img src="/vv.png" alt="" />
+        <img src="/vv.png" alt="vision img" />
       </motion.div>
       <motion.div
         animate={{
@@ -44,7 +44,7 @@ const OurVisionSection: React.FC = () => {
         }}
         className="absolute top-50 left-50 lg:left-130 md:left-100 md:w-20 md:h-20 w-15 h-15  "
       >
-        <img src="/Icon.svg" alt="" />
+        <img src="/Icon.svg" alt="Icon" />
       </motion.div>
 
       <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
@@ -64,7 +64,7 @@ const OurVisionSection: React.FC = () => {
               transition={{ type: "spring", stiffness: 200, delay: 0.2 }}
               className="flex items-start justify-start w-40 h-40  rounded-3xl mb-2"
             >
-              <img src="/rokailogo.svg" alt="" />
+              <img src="/rokailogo.svg" alt="Rokai Logo" />
             </motion.div>
 
             <motion.span
